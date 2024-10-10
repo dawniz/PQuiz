@@ -2,7 +2,7 @@
 
 <div style="text-align:center">
 
-![GitHub License](https://img.shields.io/github/license/dawniz/pquiz)
+![GitHub License](https://img.shields.io/github/license/dawniz/PQuiz)
 ![StaticBadge](https://img.shields.io/badge/-ReactJS-61DAFB?logo=react&logoColor=black&style=flat)
 
 </div></p>
