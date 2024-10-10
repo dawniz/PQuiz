@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'VPPixel';
+  src: local('MyFont'), url(./assets/fonts/VPPixel-Simplified.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+body {
+  @apply text-xl overflow-hidden bg-night text-night-text;
+  margin: 0;
+  font-family: 'VPPixel', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root{
+  @apply h-[95vh] lg:pt-0 lg:p-10 md:p-5 p-2;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn{
+  @apply transition-all flex justify-center p-3 items-center text-center border-2 bg-night-light border-night-light rounded-md cursor-pointer hover:border-red-cmyk hover:bg-red-cmyk;
+}
+.btn a{
+  @apply border-none border-[transparent]
+}
+.radio{
+  @apply transition-all flex justify-center portrait:p-2 p-6 items-center text-center border-2 border-night-light rounded-md cursor-pointer hover:border-red-cmyk
+}
+.radio input, input[type="number"]{
+  @apply hidden;
+}
+.radio:has(input[type="radio"]:checked){
+  @apply border-red-cmyk bg-red-cmyk
+}
+.typeBtn.selected[data-type="fire"]{
+  @apply bg-type-fire shadow-20px shadow-type-fire;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --tw-color-azure: theme('colors.azure.DEFAULT');
+  --tw-color-yellow: #FFC100;
+  --tw-color-red-cmyk: theme('colors.red-cmyk.DEFAULT');
+  --tw-color-night: theme('colors.night.DEFAULT');
+  --tw-color-night-text: theme('colors.night.text');
+  --pok-type-bug: theme('colors.type.bug');
+  --pok-type-dark: theme('colors.type.dark');
+  --pok-type-dragon: theme('colors.type.dragon');
+  --pok-type-electric: theme('colors.type.electric');
+  --pok-type-fire: theme('colors.type.fire');
+  --pok-type-fairy: theme('colors.type.fairy');
+  --pok-type-fighting: theme('colors.type.fighting');
+  --pok-type-flying: theme('colors.type.flying');
+  --pok-type-ghost: theme('colors.type.ghost');
+  --pok-type-grass: theme('colors.type.grass');
+  --pok-type-ground: theme('colors.type.ground');
+  --pok-type-ice: theme('colors.type.ice');
+  --pok-type-normal: theme('colors.type.normal');
+  --pok-type-poison: theme('colors.type.poison');
+  --pok-type-psychic: theme('colors.type.psychic');
+  --pok-type-rock: theme('colors.type.rock');
+  --pok-type-steel: theme('colors.type.steel');
+  --pok-type-water: theme('colors.type.water');
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
